@@ -26,8 +26,8 @@ posts = [
     }
 ]
 
-@app.route('/')
-def index():
+@app.route('/dashboard')
+def dashboard():
 	return render_template("dashboard.html")
 
 @app.route('/add-modify')
@@ -56,10 +56,10 @@ def schools():
 
 
 
-# @app.route("/")
-# @app.route("/home")
-# def home():
-#     return render_template('home.html', posts=posts)
+@app.route("/")
+@app.route("/home")
+def home():
+    return render_template('home.html', posts=posts)
 
 
 @app.route("/about")
@@ -103,8 +103,7 @@ def login():
         user = User.query.filter_by(email=form.email.data).first()
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             login_user(user, remember=form.remember.data)
-            next_page = request.args.get('next')
-            return redirect(next_page) if next_page else redirect(url_for('home'))
+            return redirect(url_for('dashboard'))
         else:
             flash('Login Unsuccessful. Please check email and password', 'danger')
     return render_template('login.html', title='Login', form=form)
