@@ -9,7 +9,7 @@ from flaskblog.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
 
 
-app.secret_key = 'siddhant'
+app.secret_key = 'secretkey123'
 
 posts = [
     {
@@ -26,17 +26,11 @@ posts = [
     }
 ]
 
-<<<<<<< HEAD
-@app.route('/dashboard')
-def dashboard():
-	return render_template("dashboard.html")
-=======
 
 @app.route('/')
 def index():
     return render_template("dashboard.html")
 
->>>>>>> e13a85ee6da0653a86651502ac360fd9e901467a
 
 @app.route('/add-modify')
 def add_modify():
@@ -63,10 +57,6 @@ def schools():
     return render_template("schools.html", rows=rows)
 
 
-<<<<<<< HEAD
-@app.route("/")
-=======
->>>>>>> e13a85ee6da0653a86651502ac360fd9e901467a
 @app.route("/home")
 def home():
     return render_template('home.html', posts=posts)
