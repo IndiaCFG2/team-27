@@ -24,20 +24,35 @@ posts = [
 ]
 
 
-@app.route("/")
 @app.route("/home")
 def home():
     return render_template('home.html', posts=posts)
 
 
-@app.route("/about")
-def about():
-    return render_template('about.html', title='About')
+@app.route('/')
+def root():
+    # # Connect to db
+    # db = sqlite3.connect('posts.db')
+    # cursor = db.cursor()
+
+    # # Get data from db
+    # cursor.execute('SELECT * FROM posts ORDER BY id DESC')
+    # posts = cursor.fetchall()
+
+    # # Close db connection
+    # db.close()
+
+    return render_template('home/index.html')
 
 
 @app.route("/teacher")
 def teacher_home():
     return render_template('teacher/index.html', title='Teacher')
+
+
+@app.route("/settings")
+def teacher_settings():
+    return render_template('teacher/setting.html', title='Teacher')
 
 
 @app.route("/course_modules")
