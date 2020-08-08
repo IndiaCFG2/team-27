@@ -29,7 +29,7 @@ posts = [
 
 @app.route('/')
 def index():
-    return render_template("dashboard.html")
+    return render_template("home/index.html")
 
 
 @app.route('/add-modify')
