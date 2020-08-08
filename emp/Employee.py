@@ -32,25 +32,7 @@ def saveDetails():
 
 @app.route('/add-modify')
 def add_modify():
-	msg = "msg"  
-    if request.method == "POST":  
-        try:  
-            t_id = request.form["t_id"]  
-            t_name = request.form["t_name"]  
-            s_name = request.form["s_name"]
-            loc - request.form["loc"]  
-            with sqlite3.connect("site.db") as con:  
-                cur = con.cursor()  
-                cur.execute("INSERT into  values (?,?,?)",(name,email,password))  
-                con.commit()  
-                msg = "SignUp Successful"  
-        except:  
-            con.rollback()  
-            msg = "Error while Signing up. Try Again"  
-        finally:  
-            status = False
-            return render_template("new.html",msg = msg,status=status)  
-            con.close()  
+	return render_template("add-modify.html") 
 
 @app.route('/school_details')
 def school_details():
