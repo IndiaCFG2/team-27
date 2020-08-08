@@ -2,7 +2,7 @@ import os
 import sqlite3
 import secrets
 from PIL import Image
-from flask import render_template, url_for, flash, redirect, request , session
+from flask import render_template, url_for, flash, redirect, request, session
 from flaskblog import app, db, bcrypt
 from flaskblog.forms import RegistrationForm, LoginForm, UpdateAccountForm
 from flaskblog.models import User, Post
@@ -26,45 +26,55 @@ posts = [
     }
 ]
 
+<<<<<<< HEAD
 @app.route('/dashboard')
 def dashboard():
 	return render_template("dashboard.html")
+=======
+
+@app.route('/')
+def index():
+    return render_template("dashboard.html")
+
+>>>>>>> e13a85ee6da0653a86651502ac360fd9e901467a
 
 @app.route('/add-modify')
 def add_modify():
-	return render_template("add-modify.html") 
+    return render_template("add-modify.html")
+
 
 @app.route('/school_details')
 def school_details():
-	con = sqlite3.connect("site.db")
-	con.row_factory = sqlite3.Row 
-	cur = con.cursor() 
-	cur.execute("select * from School_Table")
-	rows = cur.fetchall()
-	return render_template("school_details.html",rows = rows)
+    con = sqlite3.connect("site.db")
+    con.row_factory = sqlite3.Row
+    cur = con.cursor()
+    cur.execute("select * from School_Table")
+    rows = cur.fetchall()
+    return render_template("school_details.html", rows=rows)
 
 
 @app.route('/schools')
 def schools():
-	con = sqlite3.connect("site.db")
-	con.row_factory = sqlite3.Row 
-	cur = con.cursor() 
-	cur.execute("select * from Teacher_details")
-	rows = cur.fetchall()
-	return render_template("schools.html",rows = rows)
+    con = sqlite3.connect("site.db")
+    con.row_factory = sqlite3.Row
+    cur = con.cursor()
+    cur.execute("select * from Teacher_details")
+    rows = cur.fetchall()
+    return render_template("schools.html", rows=rows)
 
 
-
-
+<<<<<<< HEAD
 @app.route("/")
+=======
+>>>>>>> e13a85ee6da0653a86651502ac360fd9e901467a
 @app.route("/home")
 def home():
     return render_template('home.html', posts=posts)
 
 
-@app.route("/about")
-def about():
-    return render_template('about.html', title='About')
+@app.route('/')
+def root():
+    return render_template('home/index.html')
 
 
 @app.route("/teacher")
@@ -72,9 +82,19 @@ def teacher_home():
     return render_template('teacher/index.html', title='Teacher')
 
 
+@app.route("/settings")
+def teacher_settings():
+    return render_template('teacher/setting.html', title='Teacher')
+
+
 @app.route("/course_modules")
 def course_modules():
     return render_template('teacher/courses.html', title='Teacher')
+
+
+@app.route("/profile")
+def teacher_profile():
+    return render_template('teacher/profile.html', title='Teacher')
 
 
 @app.route("/register", methods=['GET', 'POST'])
