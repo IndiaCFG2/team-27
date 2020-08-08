@@ -265,7 +265,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Get Startet Button */
 .get-started-btn {
   margin-left: 25px;
-  background: #2487ce;
+  background: #ff6a00;
+  
   color: #fff;
   border-radius: 5px;
   padding: 10px 30px 11px 30px;
@@ -276,10 +277,11 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
 }
 
-.get-started-btn:hover {
-  background: #2079b8;
-  color: #fff;
-}
+   .get-started-btn:hover {
+        background: #2079b8;
+        background-color: #ff6a00;
+        color: #fff;
+    }
 
 @media (max-width: 768px) {
   .get-started-btn {
@@ -429,6 +431,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 72px;
   color: #124265;
   font-family: "Poppins", sans-serif;
+  padding-top:60px;
 }
 
 #hero h2 {
@@ -437,22 +440,22 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 22px;
 }
 
-#hero .btn-get-started {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  display: inline-block;
-  padding: 14px 50px;
-  border-radius: 5px;
-  transition: 0.5s;
-  margin-top: 30px;
-  color: #fff;
-  background: #2487ce;
-}
+    #hero .btn-get-started {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        display: inline-block;
+        padding: 14px 50px;
+        border-radius: 5px;
+        transition: 0.5s;
+        margin-top: 30px;
+        color:#fff;
+        background: #ff6a00;
+    }
 
 #hero .btn-get-started:hover {
-  background: #3194db;
+  background: #ff;
 }
 
 #hero .icon-boxes {
@@ -476,10 +479,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
 }
 
-#hero .icon-box .title a {
-  color: #124265;
-  transition: 0.3s;
-}
+    #hero .icon-box .title a {
+        color:#ff6a00;
+        transition: 0.3s;
+    }
 
 #hero .icon-box .description {
   font-size: 15px;
@@ -541,14 +544,14 @@ section {
   padding-bottom: 30px;
 }
 
-.section-title h2 {
-  font-size: 32px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 0;
-  color: #124265;
-}
+    .section-title h2 {
+        font-size: 32px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        padding-bottom: 0;
+        color:#ff6a00;
+    }
 
 .section-title p {
   margin-bottom: 0;
@@ -631,7 +634,7 @@ section {
   line-height: 48px;
   display: block;
   font-weight: 700;
-  color: #124265;
+  color: #e96314;
   margin-left: 80px;
   margin: auto;
 }
@@ -641,7 +644,7 @@ section {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 14px;
-  color: #1e6ca6;
+  color: #444444;
 }
 
 /*--------------------------------------------------------------
@@ -784,7 +787,7 @@ section {
 }
 
 .clients img {
-  max-width: 45%;
+  max-width: 75%;
   transition: all 0.4s ease-in-out;
   display: inline-block;
   padding: 15px 0;
@@ -1608,7 +1611,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #2487ce;
+  background: #ff6a00;
   border: 0;
   padding: 10px 30px;
   color: #fff;
@@ -1917,7 +1920,7 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #2487ce;
+  background: #ff6a00;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
