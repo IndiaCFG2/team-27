@@ -1,12 +1,15 @@
 import os
+import sqlite3
 import secrets
 from PIL import Image
-from flask import render_template, url_for, flash, redirect, request
+from flask import render_template, url_for, flash, redirect, request , session
 from flaskblog import app, db, bcrypt
 from flaskblog.forms import RegistrationForm, LoginForm, UpdateAccountForm
 from flaskblog.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
 
+
+app.secret_key = 'siddhant'
 
 posts = [
     {
@@ -23,10 +26,46 @@ posts = [
     }
 ]
 
+@app.route('/')
+def index():
+	return render_template("dashboard.html")
 
+@app.route('/add-modify')
+def add_modify():
+	return render_template("add-modify.html") 
+
+@app.route('/school_details')
+def school_details():
+	con = sqlite3.connect("site.db")
+	con.row_factory = sqlite3.Row 
+	cur = con.cursor() 
+	cur.execute("select * from School_Table")
+	rows = cur.fetchall()
+	return render_template("school_details.html",rows = rows)
+
+
+@app.route('/schools')
+def schools():
+	con = sqlite3.connect("site.db")
+	con.row_factory = sqlite3.Row 
+	cur = con.cursor() 
+	cur.execute("select * from Teacher_details")
+	rows = cur.fetchall()
+	return render_template("schools.html",rows = rows)
+
+
+
+
+<<<<<<< HEAD
 @app.route("/home")
 def home():
     return render_template('home.html', posts=posts)
+=======
+# @app.route("/")
+# @app.route("/home")
+# def home():
+#     return render_template('home.html', posts=posts)
+>>>>>>> 21dfdff478269e6f078eae2831ed16528f116111
 
 
 @app.route('/')
