@@ -8,7 +8,7 @@ app.secret_key = 'shourya'
 def index():
 	return render_template("dashboard.html")
 
-
+'''
 @app.route("/savedetails",methods = ["POST","GET"])  
 def saveDetails():  
     msg = "msg"  
@@ -29,7 +29,7 @@ def saveDetails():
             status = False
             return render_template("new.html",msg = msg,status=status)  
             con.close()  
-
+'''
 @app.route('/add-modify')
 def add_modify():
 	return render_template("add-modify.html") 
