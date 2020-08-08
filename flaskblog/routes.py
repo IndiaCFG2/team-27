@@ -64,17 +64,6 @@ def home():
 
 @app.route('/')
 def root():
-    # # Connect to db
-    # db = sqlite3.connect('posts.db')
-    # cursor = db.cursor()
-
-    # # Get data from db
-    # cursor.execute('SELECT * FROM posts ORDER BY id DESC')
-    # posts = cursor.fetchall()
-
-    # # Close db connection
-    # db.close()
-
     return render_template('home/index.html')
 
 
@@ -91,6 +80,11 @@ def teacher_settings():
 @app.route("/course_modules")
 def course_modules():
     return render_template('teacher/courses.html', title='Teacher')
+
+
+@app.route("/profile")
+def teacher_profile():
+    return render_template('teacher/profile.html', title='Teacher')
 
 
 @app.route("/register", methods=['GET', 'POST'])
