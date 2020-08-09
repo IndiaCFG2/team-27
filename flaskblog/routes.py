@@ -76,6 +76,14 @@ def home():
 def root():
     return render_template('home/index.html')
 
+@app.route('/progress')
+def teacher_progress():
+    return render_template('progress.html')
+
+@app.route('/progress/2')
+def teacher_progress2():
+    return render_template('progress2.html')
+
 @app.route("/teacher")
 def teacher_home():
     return render_template('teacher/index.html', title='Teacher')
