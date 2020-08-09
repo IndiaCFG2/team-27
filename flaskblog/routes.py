@@ -85,6 +85,11 @@ def teacher_home():
 def teacher_settings():
     return render_template('teacher/setting.html', title='Teacher')
 
+@app.route("/explore")
+def teacher_explore():
+    return render_template('teacher/explore.html', title='Teacher')
+
+
 @app.route("/certificate")
 def teacher_certificate():
     return render_template('teacher/certificate.html', title='Teacher')
