@@ -520,6 +520,17 @@ footer.sticky-footer {
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav  bg-white" id="exampleAccordion" style="box-shadow:0 .5rem 1rem rgba(0,0,0,.15)">
+      
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link">
+            <i class="fa fa-fw fa-person"></i>
+            <span><b>Name:</b> </span><span class="nav-link-text">Nikitha Sharma</span>
+            <span><b>School:</b> </span><span><span class="">Sushant</span>
+            <br>
+          </a>
+        </li>
+
+        
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="/schools">
@@ -528,7 +539,7 @@ footer.sticky-footer {
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="/schools">
+          <a class="nav-link" href="charts.html">
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">Teachers</span>
           </a>
@@ -635,18 +646,18 @@ footer.sticky-footer {
       </div>
 
       <!-- Area Chart Example-->
-      <div class="card mb-3 hide">
+      <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-area-chart"></i> Area Chart Example</div>
+          <i class="fa fa-area-chart"></i> Course Progresss</div>
         <div class="card-body">
           <canvas id="myAreaChart" width="100%" height="30"></canvas>
         </div>
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
       </div>
-      <div class="row hide">
+      <div class="row ">
         <div class="col-lg-8">
           <!-- Example Bar Chart Card-->
-          <div class="card mb-3">
+          <div class="card mb-3 hide">
             <div class="card-header">
               <i class="fa fa-bar-chart"></i> Bar Chart Example</div>
             <div class="card-body">
@@ -669,10 +680,10 @@ footer.sticky-footer {
             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
           </div>
           <!-- Card Columns Example Social Feed-->
-          <div class="mb-0 mt-4">
+          <div class="mb-0 mt-4 hide">
             <i class="fa fa-newspaper-o"></i> News Feed</div>
           <hr class="mt-2">
-          <div class="card-columns">
+          <div class="card-columns hide">
             <!-- Example Social Card-->
             <div class="card mb-3">
               <a href="#">
@@ -731,7 +742,7 @@ footer.sticky-footer {
               <div class="card-footer small text-muted">Posted 32 mins ago</div>
             </div>
             <!-- Example Social Card-->
-            <div class="card mb-3">
+            <div class="card mb-3 hide">
               <a href="#">
                 <img class="card-img-top img-fluid w-100" src="https://unsplash.it/700/450?image=180" alt="">
               </a>
@@ -795,7 +806,7 @@ footer.sticky-footer {
               <div class="card-footer small text-muted">Posted 1 hr ago</div>
             </div>
             <!-- Example Social Card-->
-            <div class="card mb-3">
+            <div class="card mb-3 hide">
               <a href="#">
                 <img class="card-img-top img-fluid w-100" src="https://unsplash.it/700/450?image=185" alt="">
               </a>
@@ -864,7 +875,7 @@ footer.sticky-footer {
           <!-- Example Pie Chart Card-->
           <div class="card mb-3">
             <div class="card-header">
-              <i class="fa fa-pie-chart"></i> Pie Chart Example</div>
+              <i class="fa fa-pie-chart"></i> Test Based Skill Analysis</div>
             <div class="card-body">
               <canvas id="myPieChart" width="100%" height="100"></canvas>
             </div>
@@ -948,14 +959,11 @@ footer.sticky-footer {
 
 
       <!-- Example DataTables Card-->
-      <div class="card mb-3" >
+      <div class="card mb-3 hide" >
         <div class="card-header">
-          <i class="fa fa-table">&nbsp</i>Teacher Data</div><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  Add Accounts
-</button>
+          <i class="fa fa-table">&nbsp</i>Teacher Data</div>
         <div class="card-body">
           <div class="table-responsive">
-            
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
@@ -976,7 +984,7 @@ footer.sticky-footer {
               <tbody>
                  {% for row in rows %}
                 <tr>
-                  <td><a href="#">{{row["Teacher_id"]}}</a></td>
+                  <td><a href="">{{row["Teacher_id"]}}</a></td>
                   <td>{{row["teacher_name"]}}</td>
                   <td>{{row["School_name"]}}</td>
                   <td>{{row["Location"]}}</td>
@@ -993,46 +1001,7 @@ footer.sticky-footer {
 
 <!--Table Ends-->
 
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="/addmodify" method="POST">
 
-          <div class="form-group">
-
-            <label for="t_id">Teacher ID</label>
-            <input class="form-control" id="t_id" rows="1" name="t_id"></input>
-
-            <label for="s_id">School ID</label>
-            <input class="form-control" id="s_id" rows="1" name="s_id"></input>
-
-            <label for="t_name">Teacher Name</label>
-            <input class="form-control" id="t_name" rows="1" name="t_name"></input>
-
-            <label for="s_name">School Name</label>
-            <input class="form-control" id="s_name" rows="1" name="s_name"></input>
-            
-            <label for="loc">Location</label>
-            <input class="form-control" id="loc" rows="1" name="loc"></input>
-          </div>
-          <input type="submit" name="submit">
-
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="#addteacher">Add teacher</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
@@ -1057,7 +1026,6 @@ footer.sticky-footer {
       <div class="container">
         <div class="text-center">
           <small>Copyright © Your Website 2018</small>
-          <div>{{msg}}</div>
         </div>
       </div>
     </footer>
@@ -1091,8 +1059,6 @@ footer.sticky-footer {
   $('.hide').hide();
 </script>
 <script>
-</script>
-<script>
 	// Chart.js scripts
 // -- Set new default font family and font color to mimic Bootstrap's default styling
 Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
@@ -1102,7 +1068,7 @@ var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["Mar 1", "Mar 2", "Mar 3", "Mar 4", "Mar 5", "Mar 6", "Mar 7", "Mar 8", "Mar 9", "Mar 10", "Mar 11", "Mar 12", "Mar 13"],
+    labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11", "Week 12", "Week 13"],
     datasets: [{
       label: "Sessions",
       lineTension: 0.3,
@@ -1115,7 +1081,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBackgroundColor: "rgba(2,117,216,1)",
       pointHitRadius: 20,
       pointBorderWidth: 2,
-      data: [10000, 30162, 26263, 18394, 18287, 28682, 31274, 33259, 25849, 24159, 32651, 31984, 38451],
+      data: [100, 301, 262, 183, 182, 286, 312, 332, 258, 241, 326, 319, 384],
     }],
   },
   options: {
@@ -1134,7 +1100,7 @@ var myLineChart = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 40000,
+          max: 400,
           maxTicksLimit: 5
         },
         gridLines: {
@@ -1147,60 +1113,44 @@ var myLineChart = new Chart(ctx, {
     }
   }
 });
-// -- Bar Chart Example
-var ctx = document.getElementById("myBarChart");
-var myLineChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
-    datasets: [{
-      label: "Revenue",
-      backgroundColor: "rgba(2,117,216,1)",
-      borderColor: "rgba(2,117,216,1)",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
-    }],
-  },
-  options: {
-    scales: {
-      xAxes: [{
-        time: {
-          unit: 'month'
-        },
-        gridLines: {
-          display: false
-        },
-        ticks: {
-          maxTicksLimit: 6
-        }
-      }],
-      yAxes: [{
-        ticks: {
-          min: 0,
-          max: 15000,
-          maxTicksLimit: 5
-        },
-        gridLines: {
-          display: true
-        }
-      }],
-    },
-    legend: {
-      display: false
-    }
-  }
-});
+
 // -- Pie Chart Example
 var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: ["Blue", "Red", "Yellow", "Green"],
+    labels: ["Speaking Skills", "Management", "Knowledge", "Perseverence"],
     datasets: [{
-      data: [12.21, 15.58, 11.25, 8.32],
+      data: [10.01, 11.58, 12.25, 18.32],
       backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
     }],
   },
 });
+
+$(document).ready(function() {
+    $('#dataTable').DataTable( {
+        initComplete: function () {
+            this.api().columns().every( function () {
+                var column = this;
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.footer()).empty() )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+ 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } );
+ 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+    } );
+} );
 
 (function($) {
   "use strict"; // Start of use strict

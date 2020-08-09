@@ -30,9 +30,36 @@ def saveDetails():
             return render_template("new.html",msg = msg,status=status)  
             con.close()  
 '''
-@app.route('/add-modify')
+
+@app.route('/queries')
+def queries():
+    con = sqlite3.connect("site.db")
+    con.row_factory = sqlite3.Row 
+    cur = con.cursor() 
+    cur.execute("select * from queries_table")
+    rows = cur.fetchall()
+    return render_template("query.html",rows = rows)
+
+
+
+@app.route('/addmodify',methods = ["POST","GET"])
 def add_modify():
-	return render_template("add-modify.html") 
+    msg = "msg"  
+    if request.method == "POST":  
+        t_id = request.form["t_id"]  
+        s_id = request.form["s_id"]
+        t_name = request.form["t_name"]  
+        s_name = request.form["s_name"]
+        loc = request.form["loc"]  
+  
+        with sqlite3.connect("site.db") as con:  
+            cur = con.cursor()  
+            cur.execute("INSERT into Teacher_details (Teacher_id,School_id, teacher_name, School_name, Location) values (?,?,?,?,?)",(t_id, s_id, t_name, s_name, loc))  
+            con.commit()  
+            msg = "Successful" 
+        con.close()   
+    return render_template("add-modify.html",msg = msg)  
+         
 
 @app.route('/school_details')
 def school_details():
@@ -54,6 +81,14 @@ def schools():
 	return render_template("schools.html",rows = rows)
 
 
+@app.route("/schools/1")  
+def prog1(): 
+    return render_template("progress.html")
+
+
+@app.route("/schools/2")  
+def prog2(): 
+    return render_template("progress2.html")      
 
 if __name__ == '__main__':
 	app.run(debug=True)

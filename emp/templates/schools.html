@@ -973,7 +973,7 @@ footer.sticky-footer {
               <tbody>
                  {% for row in rows %}
                 <tr>
-                  <td><a href="#">{{row["Teacher_id"]}}</a></td>
+                  <td><a href="/schools/{{row['Teacher_id']}}">{{row["Teacher_id"]}}</a></td>
                   <td>{{row["teacher_name"]}}</td>
                   <td>{{row["School_name"]}}</td>
                   <td>{{row["Location"]}}</td>
