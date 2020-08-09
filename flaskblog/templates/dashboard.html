@@ -608,7 +608,7 @@ footer.sticky-footer {
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-fw fa-envelope"></i>
             <span class="d-lg-none">Messages
@@ -618,73 +618,12 @@ footer.sticky-footer {
               <i class="fa fa-fw fa-circle"></i>
             </span>
           </a>
-          <div class="dropdown-menu" aria-labelledby="messagesDropdown">
-            <h6 class="dropdown-header">New Messages:</h6>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <strong>David Miller</strong>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <strong>Jane Smith</strong>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <strong>John Doe</strong>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item small" href="#">View all messages</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-fw fa-bell"></i>
-            <span class="d-lg-none">Alerts
-              <span class="badge badge-pill badge-warning">6 New</span>
-            </span>
-            <span class="indicator text-warning d-none d-lg-block">
-              <i class="fa fa-fw fa-circle"></i>
-            </span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="alertsDropdown">
-            <h6 class="dropdown-header">New Alerts:</h6>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <span class="text-success">
-                <strong>
-                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
-              </span>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <span class="text-danger">
-                <strong>
-                  <i class="fa fa-long-arrow-down fa-fw"></i>Status Update</strong>
-              </span>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <span class="text-success">
-                <strong>
-                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
-              </span>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item small" href="#">View all alerts</a>
-          </div>
-        </li>
+          
+            
+            
+            
+        </li> -->
+        
         
         <li class="nav-item">
           <a href="{{url_for('logout')}}" class="nav-link" data-toggle="modal" data-target="#exampleModal">
@@ -804,195 +743,7 @@ footer.sticky-footer {
             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
           </div>
           <!-- Card Columns Example Social Feed-->
-          <div class="mb-0 mt-4">
-            <i class="fa fa-newspaper-o"></i> News Feed</div>
-          <hr class="mt-2">
-          <div class="card-columns">
-            <!-- Example Social Card-->
-            <div class="card mb-3">
-              <a href="#">
-                <img class="card-img-top img-fluid w-100" src="https://unsplash.it/700/450?image=610" alt="">
-              </a>
-              <div class="card-body">
-                <h6 class="card-title mb-1"><a href="#">David Miller</a></h6>
-                <p class="card-text small">These waves are looking pretty good today!
-                  <a href="#">#surfsup</a>
-                </p>
-              </div>
-              <hr class="my-0">
-              <div class="card-body py-2 small">
-                <a class="mr-3 d-inline-block" href="#">
-                  <i class="fa fa-fw fa-thumbs-up"></i>Like</a>
-                <a class="mr-3 d-inline-block" href="#">
-                  <i class="fa fa-fw fa-comment"></i>Comment</a>
-                <a class="d-inline-block" href="#">
-                  <i class="fa fa-fw fa-share"></i>Share</a>
-              </div>
-              <hr class="my-0">
-              <div class="card-body small bg-faded">
-                <div class="media">
-                  <img class="d-flex mr-3" src="http://placehold.it/45x45" alt="">
-                  <div class="media-body">
-                    <h6 class="mt-0 mb-1"><a href="#">John Smith</a></h6>Very nice! I wish I was there! That looks amazing!
-                    <ul class="list-inline mb-0">
-                      <li class="list-inline-item">
-                        <a href="#">Like</a>
-                      </li>
-                      <li class="list-inline-item">·</li>
-                      <li class="list-inline-item">
-                        <a href="#">Reply</a>
-                      </li>
-                    </ul>
-                    <div class="media mt-3">
-                      <a class="d-flex pr-3" href="#">
-                        <img src="http://placehold.it/45x45" alt="">
-                      </a>
-                      <div class="media-body">
-                        <h6 class="mt-0 mb-1"><a href="#">David Miller</a></h6>Next time for sure!
-                        <ul class="list-inline mb-0">
-                          <li class="list-inline-item">
-                            <a href="#">Like</a>
-                          </li>
-                          <li class="list-inline-item">·</li>
-                          <li class="list-inline-item">
-                            <a href="#">Reply</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer small text-muted">Posted 32 mins ago</div>
-            </div>
-            <!-- Example Social Card-->
-            <div class="card mb-3">
-              <a href="#">
-                <img class="card-img-top img-fluid w-100" src="https://unsplash.it/700/450?image=180" alt="">
-              </a>
-              <div class="card-body">
-                <h6 class="card-title mb-1"><a href="#">John Smith</a></h6>
-                <p class="card-text small">Another day at the office...
-                  <a href="#">#workinghardorhardlyworking</a>
-                </p>
-              </div>
-              <hr class="my-0">
-              <div class="card-body py-2 small">
-                <a class="mr-3 d-inline-block" href="#">
-                  <i class="fa fa-fw fa-thumbs-up"></i>Like</a>
-                <a class="mr-3 d-inline-block" href="#">
-                  <i class="fa fa-fw fa-comment"></i>Comment</a>
-                <a class="d-inline-block" href="#">
-                  <i class="fa fa-fw fa-share"></i>Share</a>
-              </div>
-              <hr class="my-0">
-              <div class="card-body small bg-faded">
-                <div class="media">
-                  <img class="d-flex mr-3" src="http://placehold.it/45x45" alt="">
-                  <div class="media-body">
-                    <h6 class="mt-0 mb-1"><a href="#">Jessy Lucas</a></h6>Where did you get that camera?! I want one!
-                    <ul class="list-inline mb-0">
-                      <li class="list-inline-item">
-                        <a href="#">Like</a>
-                      </li>
-                      <li class="list-inline-item">·</li>
-                      <li class="list-inline-item">
-                        <a href="#">Reply</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer small text-muted">Posted 46 mins ago</div>
-            </div>
-            <!-- Example Social Card-->
-            <div class="card mb-3">
-              <a href="#">
-                <img class="card-img-top img-fluid w-100" src="https://unsplash.it/700/450?image=281" alt="">
-              </a>
-              <div class="card-body">
-                <h6 class="card-title mb-1"><a href="#">Jeffery Wellings</a></h6>
-                <p class="card-text small">Nice shot from the skate park!
-                  <a href="#">#kickflip</a>
-                  <a href="#">#holdmybeer</a>
-                  <a href="#">#igotthis</a>
-                </p>
-              </div>
-              <hr class="my-0">
-              <div class="card-body py-2 small">
-                <a class="mr-3 d-inline-block" href="#">
-                  <i class="fa fa-fw fa-thumbs-up"></i>Like</a>
-                <a class="mr-3 d-inline-block" href="#">
-                  <i class="fa fa-fw fa-comment"></i>Comment</a>
-                <a class="d-inline-block" href="#">
-                  <i class="fa fa-fw fa-share"></i>Share</a>
-              </div>
-              <div class="card-footer small text-muted">Posted 1 hr ago</div>
-            </div>
-            <!-- Example Social Card-->
-            <div class="card mb-3">
-              <a href="#">
-                <img class="card-img-top img-fluid w-100" src="https://unsplash.it/700/450?image=185" alt="">
-              </a>
-              <div class="card-body">
-                <h6 class="card-title mb-1"><a href="#">David Miller</a></h6>
-                <p class="card-text small">It's hot, and I might be lost...
-                  <a href="#">#desert</a>
-                  <a href="#">#water</a>
-                  <a href="#">#anyonehavesomewater</a>
-                  <a href="#">#noreally</a>
-                  <a href="#">#thirsty</a>
-                  <a href="#">#dehydration</a>
-                </p>
-              </div>
-              <hr class="my-0">
-              <div class="card-body py-2 small">
-                <a class="mr-3 d-inline-block" href="#">
-                  <i class="fa fa-fw fa-thumbs-up"></i>Like</a>
-                <a class="mr-3 d-inline-block" href="#">
-                  <i class="fa fa-fw fa-comment"></i>Comment</a>
-                <a class="d-inline-block" href="#">
-                  <i class="fa fa-fw fa-share"></i>Share</a>
-              </div>
-              <hr class="my-0">
-              <div class="card-body small bg-faded">
-                <div class="media">
-                  <img class="d-flex mr-3" src="http://placehold.it/45x45" alt="">
-                  <div class="media-body">
-                    <h6 class="mt-0 mb-1"><a href="#">John Smith</a></h6>The oasis is a mile that way, or is that just a mirage?
-                    <ul class="list-inline mb-0">
-                      <li class="list-inline-item">
-                        <a href="#">Like</a>
-                      </li>
-                      <li class="list-inline-item">·</li>
-                      <li class="list-inline-item">
-                        <a href="#">Reply</a>
-                      </li>
-                    </ul>
-                    <div class="media mt-3">
-                      <a class="d-flex pr-3" href="#">
-                        <img src="http://placehold.it/45x45" alt="">
-                      </a>
-                      <div class="media-body">
-                        <h6 class="mt-0 mb-1"><a href="#">David Miller</a></h6>
-                        <img class="img-fluid w-100 mb-1" src="https://unsplash.it/700/450?image=789" alt="">I'm saved, I found a cactus. How do I open this thing?
-                        <ul class="list-inline mb-0">
-                          <li class="list-inline-item">
-                            <a href="#">Like</a>
-                          </li>
-                          <li class="list-inline-item">·</li>
-                          <li class="list-inline-item">
-                            <a href="#">Reply</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer small text-muted">Posted yesterday</div>
-            </div>
-          </div>
+          
           <!-- /Card Columns-->
         </div>
         <div class="col-lg-4">
@@ -1006,7 +757,7 @@ footer.sticky-footer {
             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
           </div>
           <!-- Example Notifications Card-->
-          <div class="card mb-3">
+          <!-- <div class="card mb-3">
             <div class="card-header">
               <i class="fa fa-bell-o"></i> Feed Example</div>
             <div class="list-group list-group-flush small">
@@ -1054,11 +805,11 @@ footer.sticky-footer {
               <a class="list-group-item list-group-item-action" href="#">View all activity...</a>
             </div>
             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-          </div>
+          </div> -->
         </div>
       </div>
       <!-- Example DataTables Card-->
-      <div class="card mb-3">
+      <!-- <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-table"></i> Data Table Example</div>
         <div class="card-body">
@@ -1098,7 +849,7 @@ footer.sticky-footer {
           </div>
         </div>
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-      </div>
+      </div> -->
     </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
