@@ -26,6 +26,9 @@ posts = [
     }
 ]
 
+@app.errorhandler(404)
+def page_not_found(e):
+  return render_template('404.html'), 404
 
 @app.route('/')
 def index():
@@ -69,7 +72,6 @@ def home():
 def root():
     return render_template('home/index.html')
 
-
 @app.route("/teacher")
 def teacher_home():
     return render_template('teacher/index.html', title='Teacher')
@@ -79,11 +81,21 @@ def teacher_home():
 def teacher_settings():
     return render_template('teacher/setting.html', title='Teacher')
 
+@app.route("/certificate")
+def teacher_certificate():
+    return render_template('teacher/certificate.html', title='Teacher')
+
+@app.route("/feedback")
+def teacher_feedback():
+    return render_template('teacher/feedback.html', title='Teacher')
 
 @app.route("/course_modules")
 def course_modules():
     return render_template('teacher/courses.html', title='Teacher')
 
+@app.route("/dashboard")
+def dasboard_index():
+    return render_template('dashboard.html', title='Teacher')
 
 @app.route("/profile")
 def teacher_profile():
