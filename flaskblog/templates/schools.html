@@ -522,38 +522,17 @@ footer.sticky-footer {
       <ul class="navbar-nav navbar-sidenav  bg-white" id="exampleAccordion" style="box-shadow:0 .5rem 1rem rgba(0,0,0,.15)">
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="/schools">
+          <a class="nav-link" href="{{url_for('dashboard')}}">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="charts.html">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">Teachers</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="/school_details">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Schools</span>
-          </a>
-        </li>
+        
      
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-          <a class="nav-link" href="#">
-            <i class="fa fa-fw fa-link"></i>
-            <span class="nav-link-text">Queries</span>
-          </a>
-        </li>
+       
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-          <a class="nav-link" href="#">
-            <i class="fa fa-fw fa-link"></i>
-            <span class="nav-link-text">Add/Modify Accounts</span>
-          </a>
-        </li>
+       
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -973,7 +952,7 @@ footer.sticky-footer {
               <tbody>
                  {% for row in rows %}
                 <tr>
-                  <td><a href="#">{{row["Teacher_id"]}}</a></td>
+                  <td><a href="{{url_for('account')}}">{{row["Teacher_id"]}}</a></td>
                   <td>{{row["teacher_name"]}}</td>
                   <td>{{row["School_name"]}}</td>
                   <td>{{row["Location"]}}</td>

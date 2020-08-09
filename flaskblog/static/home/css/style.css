@@ -265,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Get Startet Button */
 .get-started-btn {
   margin-left: 25px;
-  background: #2487ce;
+  background: #ff6a00;
   color: #fff;
   border-radius: 5px;
   padding: 10px 30px 11px 30px;
@@ -1608,7 +1608,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #2487ce;
+  background: #ff6a00;
   border: 0;
   padding: 10px 30px;
   color: #fff;
@@ -1917,7 +1917,7 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #2487ce;
+  background: #ff6a00;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
