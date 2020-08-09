@@ -1047,24 +1047,7 @@ footer.sticky-footer {
 <script>
   $('.hide').hide();
 
-  $(document).ready(function() {
-    var t = $('#dataTable').DataTable();
-    var counter = 1;
 
-    var t_id = $('#t_id').html();
-    var t_name = $('#t_name').html();
-    var s_name = $('#s_name').html();
-    var loc = $('#loc').html();
- 
-    $('#addteacher').on( 'click', function () {
-        t.row.add( [ t_id,t_name,s_name,loc
-            
-        ] ).draw( false );
- 
-        counter++;
-    } );
-
-} );
 </script>
 <script>
 	// Chart.js scripts
